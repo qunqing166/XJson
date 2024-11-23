@@ -1,3 +1,0 @@
-E:/MyProject/C++/XJson/build/CMakeFiles/main.dir
-E:/MyProject/C++/XJson/build/CMakeFiles/edit_cache.dir
-E:/MyProject/C++/XJson/build/CMakeFiles/rebuild_cache.dir
