@@ -1,0 +1,10 @@
+{
+    "name":"qunqing166",
+    "music":["jntm", "dshh", "cq", {"name":"jntm", "singer":"jntm"}],
+    "info":{
+        "age":25,
+        "gender":"male",
+        "is":false
+    },
+    "aosi":null
+}
