@@ -2,16 +2,6 @@
 #include "../include/JsonArray.h"
 #include "../include/JsonObject.h"
 
-// JsonValue::JsonValue(const JsonArray &value)
-// {
-//     type = JsonType::Array;
-//     this->value = value.ToArray();
-// }
-// JsonValue::JsonValue(const JsonObject &value)
-// {
-//     type = JsonType::Object;
-//     this->value = value.ToMap();
-// }
 JsonArray JsonValue::ToArray() const
 {
     return std::get<std::vector<JsonValue>>(value);  

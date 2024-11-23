@@ -164,7 +164,7 @@ JsonValue JsonSerialize::ParseValue(const std::string &json, int &out_len)
                     }
                     else if (word == "null")
                     {
-                        
+
                     }
                     else if (word[0] == '"' && word[word.size() - 1] == '"')
                     {
@@ -254,59 +254,6 @@ JsonObject JsonSerialize::ParseObject(const std::string &json, int &out_len)
                     i++;
             }
         }
-        // else if (state == 2)
-        // {
-        //     if (json[i] == ',' || json[i] == '}')
-        //     {
-        //         if (json[i] == '}')
-        //         {
-        //             // len = i + 1;
-        //             out_len = i + 1;
-        //             return obj;
-        //             // break;
-        //         }
-
-        //         JsonValue v;
-        //         state = 1;
-        //         value = json.substr(word_start, i - word_start);
-        //         // std::cout << "value: " << value << std::endl;
-        //         if (value[0] == '"' && value[value.size() - 1] == '"')
-        //         {
-        //             // JsonValue v = value.substr(1, value.size() - 2);
-        //             // obj[key] = value.substr(1, value.size() - 2);
-        //             v = value.substr(1, value.size() - 2);
-        //             // obj.Insert(key, value.substr(1, value.size() - 2));
-        //         }
-        //         else if (value == "true")
-        //         {
-        //             v = true;
-        //             // obj.Insert(key, true);
-        //         }
-        //         else if (value == "false")
-        //         {
-        //             v = false;
-        //             // obj.Insert(key, false);
-        //         }
-        //         else
-        //         {
-        //             if (value.find('.') != std::string::npos)
-        //             {
-        //                 // double num = std::stod(value);
-        //                 // obj.Insert(key, num);
-        //                 v = std::stod(value);
-        //             }
-        //             else
-        //             {
-        //                 // int num = std::stoi(value);
-        //                 // obj.Insert(key, num);
-        //                 v = std::stoi(value);
-        //             }
-        //         }
-
-        //         obj.Insert(key, v);
-
-        //     }
-        // }
     }
 
     return obj;
