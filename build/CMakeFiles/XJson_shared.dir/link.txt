@@ -1,0 +1,3 @@
+"D:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\XJson_shared.dir/objects.a
+D:\envir\MinGW\mingw64\bin\ar.exe qc CMakeFiles\XJson_shared.dir/objects.a @CMakeFiles\XJson_shared.dir\objects1.rsp
+D:\envir\MinGW\mingw64\bin\g++.exe -g -shared -o E:\MyProject\C++\XJson\lib\libXJson.dll -Wl,--out-implib,E:\MyProject\C++\XJson\lib\libXJson.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\XJson_shared.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\XJson_shared.dir\linkLibs.rsp

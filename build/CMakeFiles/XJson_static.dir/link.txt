@@ -1,0 +1,2 @@
+D:\envir\MinGW\mingw64\bin\ar.exe qc E:\MyProject\C++\XJson\lib\libXJson.a CMakeFiles/XJson_static.dir/src/JsonValue.cpp.obj CMakeFiles/XJson_static.dir/src/JsonSerialize.cpp.obj
+D:\envir\MinGW\mingw64\bin\ranlib.exe E:\MyProject\C++\XJson\lib\libXJson.a

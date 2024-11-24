@@ -128,12 +128,40 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+#=============================================================================
+# Target rules for targets named XJson_static
+
+# Build rule for target.
+XJson_static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 XJson_static
+.PHONY : XJson_static
+
+# fast build rule for target.
+XJson_static/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_static.dir\build.make CMakeFiles/XJson_static.dir/build
+.PHONY : XJson_static/fast
+
+#=============================================================================
+# Target rules for targets named XJson_shared
+
+# Build rule for target.
+XJson_shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 XJson_shared
+.PHONY : XJson_shared
+
+# fast build rule for target.
+XJson_shared/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_shared.dir\build.make CMakeFiles/XJson_shared.dir/build
+.PHONY : XJson_shared/fast
+
 src/JsonSerialize.obj: src/JsonSerialize.cpp.obj
 .PHONY : src/JsonSerialize.obj
 
 # target to build an object file
 src/JsonSerialize.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/JsonSerialize.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_static.dir\build.make CMakeFiles/XJson_static.dir/src/JsonSerialize.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_shared.dir\build.make CMakeFiles/XJson_shared.dir/src/JsonSerialize.cpp.obj
 .PHONY : src/JsonSerialize.cpp.obj
 
 src/JsonSerialize.i: src/JsonSerialize.cpp.i
@@ -142,6 +170,8 @@ src/JsonSerialize.i: src/JsonSerialize.cpp.i
 # target to preprocess a source file
 src/JsonSerialize.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/JsonSerialize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_static.dir\build.make CMakeFiles/XJson_static.dir/src/JsonSerialize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_shared.dir\build.make CMakeFiles/XJson_shared.dir/src/JsonSerialize.cpp.i
 .PHONY : src/JsonSerialize.cpp.i
 
 src/JsonSerialize.s: src/JsonSerialize.cpp.s
@@ -150,6 +180,8 @@ src/JsonSerialize.s: src/JsonSerialize.cpp.s
 # target to generate assembly for a file
 src/JsonSerialize.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/JsonSerialize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_static.dir\build.make CMakeFiles/XJson_static.dir/src/JsonSerialize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_shared.dir\build.make CMakeFiles/XJson_shared.dir/src/JsonSerialize.cpp.s
 .PHONY : src/JsonSerialize.cpp.s
 
 src/JsonValue.obj: src/JsonValue.cpp.obj
@@ -158,6 +190,8 @@ src/JsonValue.obj: src/JsonValue.cpp.obj
 # target to build an object file
 src/JsonValue.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/JsonValue.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_static.dir\build.make CMakeFiles/XJson_static.dir/src/JsonValue.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_shared.dir\build.make CMakeFiles/XJson_shared.dir/src/JsonValue.cpp.obj
 .PHONY : src/JsonValue.cpp.obj
 
 src/JsonValue.i: src/JsonValue.cpp.i
@@ -166,6 +200,8 @@ src/JsonValue.i: src/JsonValue.cpp.i
 # target to preprocess a source file
 src/JsonValue.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/JsonValue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_static.dir\build.make CMakeFiles/XJson_static.dir/src/JsonValue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_shared.dir\build.make CMakeFiles/XJson_shared.dir/src/JsonValue.cpp.i
 .PHONY : src/JsonValue.cpp.i
 
 src/JsonValue.s: src/JsonValue.cpp.s
@@ -174,31 +210,33 @@ src/JsonValue.s: src/JsonValue.cpp.s
 # target to generate assembly for a file
 src/JsonValue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/JsonValue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_static.dir\build.make CMakeFiles/XJson_static.dir/src/JsonValue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\XJson_shared.dir\build.make CMakeFiles/XJson_shared.dir/src/JsonValue.cpp.s
 .PHONY : src/JsonValue.cpp.s
 
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
+test/test.obj: test/test.cpp.obj
+.PHONY : test/test.obj
 
 # target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
+test/test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/test/test.cpp.obj
+.PHONY : test/test.cpp.obj
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+test/test.i: test/test.cpp.i
+.PHONY : test/test.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+test/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/test/test.cpp.i
+.PHONY : test/test.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+test/test.s: test/test.cpp.s
+.PHONY : test/test.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+test/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/test/test.cpp.s
+.PHONY : test/test.cpp.s
 
 # Help Target
 help:
@@ -208,6 +246,8 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... XJson_shared
+	@echo ... XJson_static
 	@echo ... main
 	@echo ... src/JsonSerialize.obj
 	@echo ... src/JsonSerialize.i
@@ -215,9 +255,9 @@ help:
 	@echo ... src/JsonValue.obj
 	@echo ... src/JsonValue.i
 	@echo ... src/JsonValue.s
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
+	@echo ... test/test.obj
+	@echo ... test/test.i
+	@echo ... test/test.s
 .PHONY : help
 
 

@@ -9,13 +9,15 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "2.8"
+						"string" : "3.15"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -30,7 +32,9 @@
 					"name" : "XJson",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -38,8 +42,22 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "XJson_shared::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-XJson_shared-Debug-d12142387163be0b6d4a.json",
+					"name" : "XJson_shared",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "XJson_static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-XJson_static-Debug-b9decb72204a43073323.json",
+					"name" : "XJson_static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-5145e425aaae015f10e2.json",
+					"jsonFile" : "target-main-Debug-7b584ab607abf6af4389.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}

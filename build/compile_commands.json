@@ -1,9 +1,9 @@
 [
 {
   "directory": "E:/MyProject/C++/XJson/build",
-  "command": "D:\\envir\\MinGW\\mingw64\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c E:\\MyProject\\C++\\XJson\\src\\main.cpp",
-  "file": "E:/MyProject/C++/XJson/src/main.cpp",
-  "output": "CMakeFiles/main.dir/src/main.cpp.obj"
+  "command": "D:\\envir\\MinGW\\mingw64\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\main.dir\\test\\test.cpp.obj -c E:\\MyProject\\C++\\XJson\\test\\test.cpp",
+  "file": "E:/MyProject/C++/XJson/test/test.cpp",
+  "output": "CMakeFiles/main.dir/test/test.cpp.obj"
 },
 {
   "directory": "E:/MyProject/C++/XJson/build",
@@ -16,5 +16,29 @@
   "command": "D:\\envir\\MinGW\\mingw64\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\main.dir\\src\\JsonSerialize.cpp.obj -c E:\\MyProject\\C++\\XJson\\src\\JsonSerialize.cpp",
   "file": "E:/MyProject/C++/XJson/src/JsonSerialize.cpp",
   "output": "CMakeFiles/main.dir/src/JsonSerialize.cpp.obj"
+},
+{
+  "directory": "E:/MyProject/C++/XJson/build",
+  "command": "D:\\envir\\MinGW\\mingw64\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\XJson_static.dir\\src\\JsonValue.cpp.obj -c E:\\MyProject\\C++\\XJson\\src\\JsonValue.cpp",
+  "file": "E:/MyProject/C++/XJson/src/JsonValue.cpp",
+  "output": "CMakeFiles/XJson_static.dir/src/JsonValue.cpp.obj"
+},
+{
+  "directory": "E:/MyProject/C++/XJson/build",
+  "command": "D:\\envir\\MinGW\\mingw64\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\XJson_static.dir\\src\\JsonSerialize.cpp.obj -c E:\\MyProject\\C++\\XJson\\src\\JsonSerialize.cpp",
+  "file": "E:/MyProject/C++/XJson/src/JsonSerialize.cpp",
+  "output": "CMakeFiles/XJson_static.dir/src/JsonSerialize.cpp.obj"
+},
+{
+  "directory": "E:/MyProject/C++/XJson/build",
+  "command": "D:\\envir\\MinGW\\mingw64\\bin\\g++.exe -DXJson_shared_EXPORTS  -g -std=gnu++2a -o CMakeFiles\\XJson_shared.dir\\src\\JsonValue.cpp.obj -c E:\\MyProject\\C++\\XJson\\src\\JsonValue.cpp",
+  "file": "E:/MyProject/C++/XJson/src/JsonValue.cpp",
+  "output": "CMakeFiles/XJson_shared.dir/src/JsonValue.cpp.obj"
+},
+{
+  "directory": "E:/MyProject/C++/XJson/build",
+  "command": "D:\\envir\\MinGW\\mingw64\\bin\\g++.exe -DXJson_shared_EXPORTS  -g -std=gnu++2a -o CMakeFiles\\XJson_shared.dir\\src\\JsonSerialize.cpp.obj -c E:\\MyProject\\C++\\XJson\\src\\JsonSerialize.cpp",
+  "file": "E:/MyProject/C++/XJson/src/JsonSerialize.cpp",
+  "output": "CMakeFiles/XJson_shared.dir/src/JsonSerialize.cpp.obj"
 }
 ]

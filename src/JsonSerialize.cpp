@@ -133,7 +133,6 @@ JsonValue JsonSerialize::ParseValue(const std::string &json, int &out_len)
             std::string str = json.substr(i);
             value = ParseArray(str, len);
             out_len = i + len;
-            // i += len;
             return value;
         }
         else
@@ -150,7 +149,7 @@ JsonValue JsonSerialize::ParseValue(const std::string &json, int &out_len)
 
                     int s = 0;
                     int e = word.size() - 1;
-                    while(word[s] == ' ')s++;
+                    while(word[s] == ' ' || word[s] == '\n')s++;
                     while(word[e] == ' ' || word[e] == '\n')e--;
                     word = word.substr(s, e - s + 1);   
 
@@ -201,7 +200,6 @@ JsonObject JsonSerialize::ParseObject(const std::string &json, int &out_len)
 
     for (int i = 0; i < json.size(); ++i)
     {
-        std::string hh = json.substr(i);
         if (state == 0)
         {
             if (json[i] == '{')
@@ -221,7 +219,6 @@ JsonObject JsonSerialize::ParseObject(const std::string &json, int &out_len)
                     {
                         key = json.substr(word_start, j - word_start);
                         i = j;
-                        // std::cout << "key: " << key << "    ";
                         break;
                     }
                 }
@@ -271,7 +268,6 @@ JsonArray JsonSerialize::ParseArray(const std::string &json, int &out_len)
 
     for (int i = 0; i < json.size(); ++i)
     {
-        std::string hh = json.substr(i);
         if (state == 0)
         {
             if (json[i] == '[')

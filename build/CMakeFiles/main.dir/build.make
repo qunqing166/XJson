@@ -68,19 +68,19 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
-CMakeFiles/main.dir/src/main.cpp.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/main.cpp.obj: E:/MyProject/C++/XJson/src/main.cpp
-CMakeFiles/main.dir/src/main.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\MyProject\C++\XJson\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/src/main.cpp.obj"
-	D:\envir\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/main.cpp.obj -MF CMakeFiles\main.dir\src\main.cpp.obj.d -o CMakeFiles\main.dir\src\main.cpp.obj -c E:\MyProject\C++\XJson\src\main.cpp
+CMakeFiles/main.dir/test/test.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/test/test.cpp.obj: E:/MyProject/C++/XJson/test/test.cpp
+CMakeFiles/main.dir/test/test.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\MyProject\C++\XJson\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/test/test.cpp.obj"
+	D:\envir\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/test/test.cpp.obj -MF CMakeFiles\main.dir\test\test.cpp.obj.d -o CMakeFiles\main.dir\test\test.cpp.obj -c E:\MyProject\C++\XJson\test\test.cpp
 
-CMakeFiles/main.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/main.cpp.i"
-	D:\envir\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\MyProject\C++\XJson\src\main.cpp > CMakeFiles\main.dir\src\main.cpp.i
+CMakeFiles/main.dir/test/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/test/test.cpp.i"
+	D:\envir\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\MyProject\C++\XJson\test\test.cpp > CMakeFiles\main.dir\test\test.cpp.i
 
-CMakeFiles/main.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
-	D:\envir\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\MyProject\C++\XJson\src\main.cpp -o CMakeFiles\main.dir\src\main.cpp.s
+CMakeFiles/main.dir/test/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/test/test.cpp.s"
+	D:\envir\MinGW\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\MyProject\C++\XJson\test\test.cpp -o CMakeFiles\main.dir\test\test.cpp.s
 
 CMakeFiles/main.dir/src/JsonValue.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/JsonValue.cpp.obj: E:/MyProject/C++/XJson/src/JsonValue.cpp
@@ -112,14 +112,14 @@ CMakeFiles/main.dir/src/JsonSerialize.cpp.s: cmake_force
 
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/src/main.cpp.obj" \
+"CMakeFiles/main.dir/test/test.cpp.obj" \
 "CMakeFiles/main.dir/src/JsonValue.cpp.obj" \
 "CMakeFiles/main.dir/src/JsonSerialize.cpp.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-E:/MyProject/C++/XJson/bin/main.exe: CMakeFiles/main.dir/src/main.cpp.obj
+E:/MyProject/C++/XJson/bin/main.exe: CMakeFiles/main.dir/test/test.cpp.obj
 E:/MyProject/C++/XJson/bin/main.exe: CMakeFiles/main.dir/src/JsonValue.cpp.obj
 E:/MyProject/C++/XJson/bin/main.exe: CMakeFiles/main.dir/src/JsonSerialize.cpp.obj
 E:/MyProject/C++/XJson/bin/main.exe: CMakeFiles/main.dir/build.make

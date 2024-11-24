@@ -9,6 +9,7 @@
 class JsonSerialize
 {
 public:
+
     static std::string Serialize(const JsonObject &obj);
 
     static std::string Serialize(const JsonArray &arr);
