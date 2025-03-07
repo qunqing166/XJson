@@ -1,4 +1,5 @@
 #include "../include/JsonSerialize.h"
+#include <stack>
 
 std::string JsonSerialize::Serialize(const JsonObject &obj)
 {
@@ -17,8 +18,8 @@ std::string JsonSerialize::Serialize(const JsonObject &obj)
         case JsonValue::JsonType::String:
             result += "\"" + key + "\":\"" + value.ToString() + "\"";
             break;
-        case JsonValue::JsonType::Int:
-            result += "\"" + key + "\":" + std::to_string(value.ToInt());
+        case JsonValue::JsonType::Integer:
+            result += "\"" + key + "\":" + std::to_string(value.ToInteger());
             break;
         case JsonValue::JsonType::Double:
             result += "\"" + key + "\":" + std::to_string(value.ToDouble());
@@ -60,8 +61,8 @@ std::string JsonSerialize::Serialize(const JsonArray &arr)
         case JsonValue::JsonType::String:
             result += "\"" + value.ToString() + "\"";
             break;
-        case JsonValue::JsonType::Int:
-            result += std::to_string(value.ToInt());
+        case JsonValue::JsonType::Integer:
+            result += std::to_string(value.ToInteger());
             break;
         case JsonValue::JsonType::Double:
             result += std::to_string(value.ToDouble());
@@ -138,15 +139,31 @@ JsonValue JsonSerialize::ParseValue(const std::string &json, int &out_len)
         else
         {
             int word_start = i;
+
+            std::stack<char> qm;    // 装载引号用的
             for (int j = i; j < json.size(); ++j)
             {
+                // 通过栈装载引号判断是否是个完整的字符串
+                if(json[j] == '"' || json[j] == '\'')
+                {
+                    if(qm.empty())qm.push(json[j]);
+                    else
+                    {
+                        if(qm.top() == json[j])
+                            qm.pop();
+                        else
+                            qm.push(json[j]);
+                    }
+                }
+
                 switch (json[j])
                 {
                 case ',':;
                 case '}':;
                 case ']':
+                    if(!qm.empty())break;
                     std::string word = json.substr(word_start, j - word_start);
-
+                    // std::cout << word << "\n";
                     int s = 0;
                     int e = word.size() - 1;
                     while(word[s] == ' ' || word[s] == '\n')s++;
@@ -175,10 +192,13 @@ JsonValue JsonSerialize::ParseValue(const std::string &json, int &out_len)
                     }
                     else
                     {
-                        value = std::stoi(word);
+                        // std::cout << word << "\n";
+                        // value = std::stoi(word);
+                        value = std::stoll(word);
                     }
                     out_len = j;
                     return value;
+                // default:;
                 }
             }
         }

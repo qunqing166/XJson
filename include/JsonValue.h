@@ -17,7 +17,7 @@ public:
     {
         Null,
         Bool,
-        Int,
+        Integer,
         Double,
         String,
         Array,
@@ -30,7 +30,7 @@ public:
         type = other.type;
         this->value = other.value;
     }
-    JsonValue(int value){ SetValue(value); }    
+    JsonValue(long long value){ SetValue(value); }
     JsonValue(double value){ SetValue(value); }
     JsonValue(bool value){ SetValue(value); }
     JsonValue(const char* value){ SetValue(std::string(value)); }
@@ -63,14 +63,15 @@ public:
         }
     }
 
-    bool IsInt() const { return type == Int; }
+    bool IsInteger() const { return type == Integer; }
     bool IsDouble() const { return type == Double; }
     bool IsBool() const { return type == Bool; }
     bool IsString() const { return type == String; }
     bool IsArray() const { return type == Array; }
     bool IsObject() const { return type == Object; }
 
-    int ToInt() const { return std::get<int>(value); }
+    // int ToInt() const { return std::get<int>(value); }
+    long long ToInteger() const { return std::get<long long>(value); }
     double ToDouble() const { return std::get<double>(value); }
     bool ToBool() const { return std::get<bool>(value); }
     const std::string& ToString() const { return std::get<std::string>(value); }
@@ -78,7 +79,7 @@ public:
     JsonArray ToArray() const;
     JsonObject ToObject() const;
 
-    void SetValue(int value) { type = JsonType::Int; this->value = value; }
+    void SetValue(long long value) { type = JsonType::Integer; this->value = value; }
     void SetValue(double value) { type = JsonType::Double; this->value = value; }
     void SetValue(bool value) { type = JsonType::Bool; this->value = value; }
     void SetValue(const std::string& value) { type = JsonType::String; this->value = value; }
@@ -92,6 +93,6 @@ public:
 private:
     JsonType type;
 
-    std::variant<int, double, bool, std::string, std::vector<JsonValue>, std::map<std::string, JsonValue>> value;
+    std::variant<long long, double, bool, std::string, std::vector<JsonValue>, std::map<std::string, JsonValue>> value;
     
 };

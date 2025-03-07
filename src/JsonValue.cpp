@@ -4,7 +4,7 @@
 
 JsonArray JsonValue::ToArray() const
 {
-    return std::get<std::vector<JsonValue>>(value);  
+    return std::get<std::vector<JsonValue>>(value);
 }
 
 JsonObject JsonValue::ToObject() const
